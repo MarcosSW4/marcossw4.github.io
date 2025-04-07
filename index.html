@@ -1,107 +1,118 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Marcos Rockenbach - Link na Bio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     body {
-      margin: 0;
-      padding: 40px 20px;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #e0e0e0, #ffffff);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background: linear-gradient(135deg, #ffffff, #f0f0f0);
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
-    .foto-perfil {
+
+    .container {
+      padding: 30px 20px;
+    }
+
+    img.profile {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #ddd;
       margin-bottom: 20px;
-      animation: fadeIn 0.8s ease forwards;
+      border: 3px solid #ccc;
     }
+
     h1 {
-      margin: 10px 0;
       font-size: 24px;
-      animation: fadeIn 0.8s ease forwards;
+      margin: 5px 0;
     }
+
     p {
+      color: #666;
       margin-bottom: 30px;
-      font-size: 16px;
-      color: #555;
-      max-width: 300px;
-      animation: fadeIn 0.8s ease forwards;
     }
+
     .link-btn {
-      padding: 14px 25px;
+      display: inline-block;
+      margin: 10px auto;
+      padding: 12px 20px;
       font-size: 16px;
-      margin: 10px;
       border: none;
-      border-radius: 50px;
-      cursor: pointer;
+      border-radius: 30px;
+      text-decoration: none;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 80%;
-      max-width: 300px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-      animation: slideUp 0.6s ease forwards, pulseShadow 2s infinite ease-in-out;
-      opacity: 0;
+      background: #111;
+      width: 260px;
+      transition: all 0.3s ease;
+      animation: slideIn 0.5s ease forwards;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
     }
+
+    .link-btn i {
+      margin-right: 10px;
+    }
+
     .link-btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     }
-    #instagram {
-      background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
-      animation-delay: 0.2s;
+
+    .instagram {
+      background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
     }
-    #tiktok {
-      background-color: #000;
-      animation-delay: 0.4s;
+
+    .tiktok {
+      background-color: #010101;
     }
-    #youtube {
+
+    .youtube {
       background-color: #FF0000;
-      animation-delay: 0.6s;
     }
-    i {
-      font-size: 18px;
+
+    .email {
+      background-color: #0078D4;
     }
-    @keyframes slideUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    @keyframes pulseShadow {
-      0%, 100% { box-shadow: 0 0 12px rgba(0, 0, 0, 0.1); }
-      50% { box-shadow: 0 0 18px rgba(0, 0, 0, 0.2); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
+
+    @keyframes slideIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
 <body>
-  <img src="foto-perfil.jpg" alt="Foto de Perfil" class="foto-perfil">
-  <h1>Marcos Rockenbach</h1>
-  <p>Criador de conteúdo</p>
-  <button id="instagram" class="link-btn" onclick="window.open('https://www.instagram.com/m_rockenbach__', '_blank')">
-    <i class="fab fa-instagram"></i> Instagram
-  </button>
-  <button id="tiktok" class="link-btn" onclick="window.open('https://www.tiktok.com/@mrrockenbach?_t=ZM-8vIELgvAKdr&_r=1', '_blank')">
-    <i class="fab fa-tiktok"></i> TikTok
-  </button>
-  <button id="youtube" class="link-btn" onclick="window.open('https://youtube.com/@imthelegend03?si=_IHmK1iBVKXAa72h', '_blank')">
-    <i class="fab fa-youtube"></i> YouTube
-  </button>
+  <div class="container">
+    <img src="foto-perfil.jpg" alt="Foto de Perfil" class="profile" />
+    <h1>Marcos Rockenbach</h1>
+    <p>Criador de conteúdo</p>
+
+    <a href="https://www.instagram.com/m_rockenbach__" class="link-btn instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+
+    <a href="https://www.tiktok.com/@mrrockenbach" class="link-btn tiktok">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+
+    <a href="https://youtube.com/@imthelegend03" class="link-btn youtube">
+      <i class="fab fa-youtube"></i> YouTube
+    </a>
+
+    <a href="mailto:marcos.rockenbach.2003@outlook.com" class="link-btn email">
+      <i class="fas fa-envelope"></i> E-mail para contato
+    </a>
+
+    <div style="margin-top:40px; max-width:400px; margin-left:auto; margin-right:auto;">
+      <h3 style="font-size: 18px; color:#333; margin-bottom: 10px;">Seguidores do TikTok (ao vivo):</h3>
+      <iframe src="https://livecounts.io/tiktok-live-follower-counter/mrrockenbach"
+              width="100%" height="200" style="border:none;border-radius:12px;box-shadow:0 0 12px rgba(0,0,0,0.1);">
+      </iframe>
+    </div>
+  </div>
 </body>
 </html>
